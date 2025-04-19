@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"],         // <‑‑ sólo código de producción
+  "exclude": ["tests", "jest.config.ts"] // <‑‑ ignora tests y config
+}
