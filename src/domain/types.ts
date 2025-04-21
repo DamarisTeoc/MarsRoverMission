@@ -16,8 +16,12 @@ export interface RoverResult {
   encounteredObstacle?: Position;
 }
 
-/**
- * Secuencia ordenada de direcciones para facilitar los giros.
- * 0=N, 1=E, 2=S, 3=W
- */
+
 export const directions: Direction[] = ["N", "E", "S", "W"];
+
+export const moveVectors: Record<Direction, { dx: number; dy: number }> = {
+  N: { dx: 0, dy: -1 },
+  E: { dx: 1, dy: 0 },
+  S: { dx: 0, dy: 1 },
+  W: { dx: -1, dy: 0 }
+};
